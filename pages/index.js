@@ -2,17 +2,18 @@ import Link from 'next/link';
 
 import Layout from '../components/layout.js';
 
+/**
+ * Main component - all others rendered from here.
+ */
 const Index = () => (
   <div>
-    {/* <Header /> */}
-    
-    {/* <Link href="/about">
-      <a title="About Page">About Page</a>
-    </Link> */}
-
     <Layout>
-      <p>Hello Next.js</p>
+      <h1>Form PC</h1>
     </Layout>
+    <div>
+      <p>Test hello yes this is dog</p>
+      <p>Thats not a boomer meme leave me alone</p>
+    </div>
   </div>
 )
 export default Index
