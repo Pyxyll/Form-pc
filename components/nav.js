@@ -4,7 +4,7 @@ const linkStyle = {
   marginRight: 15
 };
 
-const Header = () => (
+const Nav = () => (
   <div>
     <Link href="/">
       <a style={linkStyle}>Home</a>
@@ -15,4 +15,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default Nav;
