@@ -1,8 +1,5 @@
 import Link from 'next/link';
 
-/**
- * Components
- */
 import Layout from '../components/layout.js';
 
 const Index = () => (

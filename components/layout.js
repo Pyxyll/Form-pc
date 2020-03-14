@@ -1,11 +1,11 @@
-import Header from './Header';
+import Head from 'next/Head'
 
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
+import TopNav from './topnav';
 
+/**
+ * This is the styles component for the app.
+ * Add anything to the Apps head here.
+ */
 const Layout = props => (
   <div style={layoutStyle}>
     <Header />
