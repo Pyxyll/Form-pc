@@ -5,13 +5,17 @@ import Link from 'next/link';
  */
 import Layout from '../components/layout.js';
 
+/**
+ * Main component - all others rendered from here.
+ */
 const Index = () => (
   <div>
     <Layout>
       <h1>Form PC</h1>
     </Layout>
     <div>
-      <p>Test</p>
+      <p>Test hello yes this is dog</p>
+      <p>Thats not a boomer meme leave me alone</p>
     </div>
   </div>
 )
