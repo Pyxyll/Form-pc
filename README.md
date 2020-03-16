@@ -7,11 +7,13 @@ The Form PC site is built with Next.JS, and Express. The Bootstrap 4 library is 
 
 ## Scripts
 For Dylan:
+
 Note: Eventually we wont need to run these as Docker will do that for us.
+
 In the project directory, you can run:
 
 ### `npm run dev`
-For a dev build
+For a dev build. This is what you want to use for a localhost.
 
 ### `npm run build`
 For a build (minifies, generates the .next folder which contains all the rendered content, etc).
