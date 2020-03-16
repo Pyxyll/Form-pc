@@ -12,11 +12,13 @@ Note: Eventually we wont need to run these as Docker will do that for us.
 
 In the project directory, you can run:
 
-### `npm run dev`
-For a dev build. This is what you want to use for a localhost.
+### `docker-compose up`
+This runs: `npm run dev` for a dev build. This is what you want to use for a localhost.
+Production build has not been created yet, so when deploying we will need to look at this again.
 
+### Other scripts that can be run:
 ### `npm run build`
-For a build (minifies, generates the .next folder which contains all the rendered content, etc).
+For a Next.JS build (minifies, generates the .next folder which contains all the rendered content, etc).
 Don't need to bother with this very often.
 
 ### `npm run start`
