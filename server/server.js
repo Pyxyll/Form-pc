@@ -15,7 +15,7 @@ app.prepare().then(() => {
 
    server.get('/api/parts/gpu', (req, res) => {
       console.log("server")
-      res.send({express: "Hello"});
+      res.send({express_says: "Hello"});
    })
    
    //   server.get('/b', (req, res) => {
