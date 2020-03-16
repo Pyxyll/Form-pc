@@ -6,21 +6,19 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-
 app.prepare().then(() => {
    const server = express()
+   const showRoutes = require('./routes/index.js')
 
-   server.get('/api/parts/gpu', (req, res) => {
-      console.log("server")
+   // API startpoint
+   server.use('/api', showRoutes);
+
+   // Standard API. Use above and above file for actual routes.
+   // REMOVE FOR PRODUCTION
+   server.get('/api/parts', (req, res) => {
+      console.log("api hit")
       res.send({express_says: "Hello"});
    })
-   
-   //   server.get('/b', (req, res) => {
-   //     return app.render(req, res, '/b', req.query)
-   //   })
 
    server.all('*', (req, res) => {
       return handle(req, res)
@@ -30,4 +28,7 @@ app.prepare().then(() => {
       if (err) throw err
       console.log(`> Ready on http://localhost:${port}`)
    })
+}).catch(ex => {
+   console.error(ex.stack);
+   process.exit(1);
 })
