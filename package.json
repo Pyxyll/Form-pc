@@ -22,5 +22,8 @@
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.13.0",
     "sass": "^1.26.3"
+  },
+  "devDependencies": {
+    "prettier": "1.19.1"
   }
 }
