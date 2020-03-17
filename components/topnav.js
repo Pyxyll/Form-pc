@@ -9,11 +9,10 @@ const TopNav = () => (
           <img
             alt=''
             src='../static/logo.png'
-            width='80'
-            height='30'
+            width='200'
+            height='80'
             className='d-inline-block align-top'
           />{' '}
-          Form
         </Navbar.Brand>
       </Link>
 
@@ -22,6 +21,12 @@ const TopNav = () => (
         <Nav className='mr-auto'>
           <Link href='/about' passHref>
             <Nav.Link>About</Nav.Link>
+          </Link>
+          <Link href='/about' passHref>
+            <Nav.Link>Components</Nav.Link>
+          </Link>
+          <Link href='/about' passHref>
+            <Nav.Link>FAQ</Nav.Link>
           </Link>
         </Nav>
       </Navbar.Collapse>
