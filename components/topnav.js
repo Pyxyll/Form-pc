@@ -1,20 +1,18 @@
 import Link from 'next/link';
 import { Navbar, Nav } from 'react-bootstrap';
 
-// import logo from '../static/logo.png';
-
 const TopNav = () => (
   <div>
     <Navbar bg='dark' variant='dark'>
       <Link href='/' passHref>
         <Navbar.Brand href='/'>
-          {/* <img
-            alt=""
-            src="{logo}"
-            width="30"
-            height="30"
-            className="d-inline-block align-top"
-          />{' '} */}
+          <img
+            alt=''
+            src='../static/logo.png'
+            width='80'
+            height='30'
+            className='d-inline-block align-top'
+          />{' '}
           Form
         </Navbar.Brand>
       </Link>
