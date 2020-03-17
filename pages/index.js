@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import Layout from '../components/layout.js';
 
 /**
@@ -15,5 +13,5 @@ const Index = () => (
       <p>Thats not a boomer meme leave me alone</p>
     </div>
   </div>
-)
-export default Index
+);
+export default Index;

@@ -5,10 +5,9 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const TopNav = () => (
   <div>
-    <Navbar bg="dark" variant="dark">
-
-      <Link href="/" passHref>
-        <Navbar.Brand href="/">
+    <Navbar bg='dark' variant='dark'>
+      <Link href='/' passHref>
+        <Navbar.Brand href='/'>
           {/* <img
             alt=""
             src="{logo}"
@@ -16,19 +15,18 @@ const TopNav = () => (
             height="30"
             className="d-inline-block align-top"
           />{' '} */}
-      Form
-    </Navbar.Brand>
+          Form
+        </Navbar.Brand>
       </Link>
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse className="justify-content-end">
-        <Nav className="mr-auto">
-          <Link href="/about" passHref>
+      <Navbar.Toggle aria-controls='basic-navbar-nav' />
+      <Navbar.Collapse className='justify-content-end'>
+        <Nav className='mr-auto'>
+          <Link href='/about' passHref>
             <Nav.Link>About</Nav.Link>
           </Link>
         </Nav>
       </Navbar.Collapse>
-
     </Navbar>
   </div>
 );
