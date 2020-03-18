@@ -22,10 +22,10 @@ const TopNav = () => (
           <Link href='/about' passHref>
             <Nav.Link>About</Nav.Link>
           </Link>
-          <Link href='/about' passHref>
+          <Link href='/components' passHref>
             <Nav.Link>Components</Nav.Link>
           </Link>
-          <Link href='/about' passHref>
+          <Link href='/faq' passHref>
             <Nav.Link>FAQ</Nav.Link>
           </Link>
         </Nav>
