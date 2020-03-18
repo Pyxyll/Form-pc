@@ -1,10 +1,10 @@
 import Layout from '../components/layout.js';
 
-const About = () => (
+const Components = () => (
   <div>
     <Layout>
-      <p>About page</p>
+      <p>Components page</p>
     </Layout>
   </div>
 );
-export default About;
+export default Components;
