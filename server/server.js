@@ -1,34 +1,32 @@
-const express = require('express')
-const next = require('next')
+require("dotenv").config({ path: "../.env" });
 
-const port = process.env.PORT || 5000
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+const express = require("express");
+const cors = require("cors");
 
-app.prepare().then(() => {
-   const server = express()
-   const showRoutes = require('./routes/index.js')
+const server = express();
+const showRoutes = require("./routes/index.js");
 
-   // API startpoint
-   server.use('/api', showRoutes);
+const PORT = process.env.SERVER_PORT;
 
-   // Standard API. Use above and above file for actual routes.
-   // REMOVE FOR PRODUCTION
-   server.get('/api/parts', (req, res) => {
-      console.log("api hit")
-      res.send({express_says: "Hello"});
-   })
+// Use CORS
+server.use(cors());
 
-   server.all('*', (req, res) => {
-      return handle(req, res)
-   })
+// API startpoint
+server.use("/api", showRoutes);
 
-   server.listen(port, err => {
-      if (err) throw err
-      console.log(`> Ready on http://localhost:${port}`)
-   })
-}).catch(ex => {
-   console.error(ex.stack);
-   process.exit(1);
-})
+// Standard API. Use above and above file for actual routes.
+// REMOVE FOR PRODUCTION
+server.get("/api/parts", (req, res) => {
+  console.log("api hit");
+  res.send({ express_says: "Hello" });
+});
+
+server.listen(PORT, err => {
+  if (err) throw err;
+  console.log(`> Ready on http://localhost:${PORT}`);
+});
+
+// .catch(ex => {
+//   console.error(ex.stack);
+//   process.exit(1);
+// });

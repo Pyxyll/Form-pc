@@ -1,5 +1,7 @@
 # dependencies
 node_modules
+client/node_modules
+server/node_modules
 
 # misc
 .DS_Store
@@ -9,4 +11,7 @@ node_modules
 .env.production.local
 
 # next.js build output
-.next
+client/.next
+
+# ENV
+.env.development

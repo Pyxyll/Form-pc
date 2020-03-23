@@ -4,6 +4,7 @@ const About = () => (
   <div>
     <Layout>
       <p>About page</p>
+      <p>hello hello hello</p>
     </Layout>
   </div>
 );
