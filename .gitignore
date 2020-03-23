@@ -12,3 +12,6 @@ server/node_modules
 
 # next.js build output
 client/.next
+
+# ENV
+.env
