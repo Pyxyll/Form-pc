@@ -16,6 +16,7 @@ Then to serve:
 
 The front end port is 3000, back end is 5000.
 So, if you wanted to view the front end visit: localhost:3000
+
 For the backend API visit localhost:5000
 
 All files in client and server sides are watched for changes by docker.
