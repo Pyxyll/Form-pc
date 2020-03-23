@@ -1,10 +1,39 @@
 version: "3"
 services:
+  ######################################
+  #      Setup frontend container
+  ######################################
   nextjs:
-    build: ./
+    build: ./client
+    environment:
+      - CLIENT_PORT=${CLIENT_PORT}
+    expose:
+      - ${CLIENT_PORT}
+    ports:
+      - ${CLIENT_PORT}:${CLIENT_PORT}
+    volumes:
+      - ./client/:/usr/src/app/client
+    links:
+      - server
+    command: npm run dev
+
+  ######################################
+  #      Setup nginx container
+  ######################################
   nginx:
     build: ./nginx
-    ports:
-      - 80:80
+
+  ######################################
+  #      Setup backend container
+  ######################################
   server:
-    image: node:10
+    build: ./server
+    expose:
+      - ${SERVER_PORT}
+    environment:
+      SERVER_PORT: ${SERVER_PORT}
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    volumes:
+      - ./server/:/usr/src/app/server
+    command: npm run dev

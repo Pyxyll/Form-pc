@@ -6,7 +6,7 @@ const cors = require("cors");
 const server = express();
 const showRoutes = require("./routes/index.js");
 
-const PORT = process.env.PORT;
+const PORT = process.env.SERVER_PORT;
 
 // Use CORS
 server.use(cors());
