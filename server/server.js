@@ -1,9 +1,12 @@
+require("dotenv").config({ path: "../.env" });
+
 const express = require("express");
 const cors = require("cors");
-require("dotenv").config();
 
 const server = express();
 const showRoutes = require("./routes/index.js");
+
+const PORT = process.env.PORT;
 
 // Use CORS
 server.use(cors());
@@ -18,9 +21,9 @@ server.get("/api/parts", (req, res) => {
   res.send({ express_says: "Hello" });
 });
 
-server.listen(process.env.PORT, err => {
+server.listen(PORT, err => {
   if (err) throw err;
-  console.log(`> Ready on http://localhost:${process.env.PORT}`);
+  console.log(`> Ready on http://localhost:${PORT}`);
 });
 
 // .catch(ex => {

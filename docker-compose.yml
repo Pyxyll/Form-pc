@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   nextjs:
     build: ./
@@ -6,3 +6,5 @@ services:
     build: ./nginx
     ports:
       - 80:80
+  server:
+    image: node:10
