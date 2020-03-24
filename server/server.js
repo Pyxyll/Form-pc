@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 
 const server = express();
-const showRoutes = require("./routes/index.js");
+const showRoutes = require("./api");
 
 const PORT = process.env.SERVER_PORT;
 
@@ -12,15 +12,9 @@ const PORT = process.env.SERVER_PORT;
 server.use(cors());
 
 // API startpoint
-server.use("/api", showRoutes);
+server.use("/api/v1", showRoutes);
 
-// Standard API. Use above and above file for actual routes.
-// REMOVE FOR PRODUCTION
-server.get("/api/parts", (req, res) => {
-  console.log("api hit");
-  res.send({ express_says: "Hello" });
-});
-
+// Start the Express server
 server.listen(PORT, err => {
   if (err) throw err;
   console.log(`> Ready on http://localhost:${PORT}`);
