@@ -13,12 +13,13 @@ router.get("/", (req, res) => {
       length: 279,
       mem_type: "GDDR5",
       cuda_cores: 1920,
+      stream_processors: null,
       vram: 6,
       tdp: 150,
       fans: 2,
       frequency: { base: 1607, boost: 1797 },
-      ports: { hdmi: 1, display: 3, vga: 0, dvi: 1 },
-      benchmarks: { fortnite: [78, 67, 87], csgo: [250, 267, 256] }
+      ports: { hdmi: 1, display: 3, vga: 0, dvi: 1 }
+      // benchmarks: { fortnite: [78, 67, 87], csgo: [250, 267, 256] }
     }
   ]);
 });

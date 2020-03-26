@@ -6,6 +6,7 @@ const cors = require("cors");
 const server = express();
 const showRoutes = require("./routes");
 
+// Get the port number from env
 const PORT = process.env.SERVER_PORT;
 
 // Use CORS

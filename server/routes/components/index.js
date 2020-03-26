@@ -5,7 +5,6 @@ const gpuRoutes = require("./gpu");
 const cpuRoutes = require("./cpu");
 const motherboardRoutes = require("./motherboard");
 
-// Refactor ALL (exept the export) below this into seperate routes.
 router
   .get("/", (req, res) => {
     res.send([
