@@ -2,14 +2,19 @@ require("dotenv").config({ path: "../.env" });
 
 const express = require("express");
 const cors = require("cors");
+const bodyParser = require('body-parser');
 
 const server = express();
-const showRoutes = require("./api");
+const showRoutes = require("./routes");
 
+// Get the port number from env
 const PORT = process.env.SERVER_PORT;
 
 // Use CORS
 server.use(cors());
+
+// Use the body parser middleware
+server.use(bodyParser.json());
 
 // API startpoint
 server.use("/api/v1", showRoutes);
