@@ -20,8 +20,8 @@ services:
   ######################################
   #      Setup nginx container
   ######################################
-  nginx:
-    build: ./nginx
+  # nginx:
+  #   build: ./nginx
 
   ######################################
   #      Setup backend container
