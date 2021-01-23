@@ -2,22 +2,32 @@ import { call } from 'file-loader';
 import Layout from '../components/layout.js';
 import { getData } from '../services/Api/index.js';
 
+// Check for valid response
 const getStuff = async () => {
   try {
-    const temp = await getData();
-    const responseData = temp;
-    console.log(responseData);
+    const response = await getData();
+    if (response.status !== 200) return;
+    return response.data;
   } catch (e) {
     console.info(e.message);
   }
 };
 
-getStuff();
+// Handle response
+const getUiInfo = async () => {
+  const stuff = await getStuff();
+
+  const title = stuff[0].title;
+  const compArr = stuff[1].components;
+  console.log('Hi: ', compArr);
+};
+
+getUiInfo();
 
 /**
  * Main component - all others rendered from here.
  */
-const Index = () => (
+const Index = props => (
   <div>
     <Layout>
       <h1>Form PC</h1>

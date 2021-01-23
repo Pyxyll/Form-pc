@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { Navbar, Nav } from 'react-bootstrap';
 
+/**
+ * Controls the topnav elements
+ */
+
 const TopNav = () => (
   <div>
     <Navbar bg='dark' variant='dark'>

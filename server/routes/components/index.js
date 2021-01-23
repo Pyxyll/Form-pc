@@ -8,8 +8,8 @@ const motherboardRoutes = require("./motherboard");
 router
   .get("/", async (req, res) => {
     res.send([
-      { API_says: "This is the components section." },
-      { Components: ["gpus", "cpus", "cases", "mobos", "etc"] },
+      { title: "This is the funny section." },
+      { components: ["gpus", "cpus", "cases", "mobos", "etc"] },
     ]);
   })
   .use("/gpu", gpuRoutes)
