@@ -9,7 +9,7 @@ router
     console.log("API hit");
     res.send({
       express_says:
-        "This is the api. Please enter a route for more information."
+        "This is the api. Please enter a route for more information.",
     });
   })
   .use("/components", componentRoutes);
