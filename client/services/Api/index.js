@@ -9,6 +9,6 @@ export const getData = async () => {
       return response;
     })
     .catch(error => {
-      console.log('error');
+      console.info('error');
     });
 };

@@ -3,10 +3,13 @@ import Layout from '../components/layout.js';
 import { getData } from '../services/Api/index.js';
 
 const getStuff = async () => {
-  const temp = await getData();
-  const responseData = temp.data;
-
-  console.log(responseData);
+  try {
+    const temp = await getData();
+    const responseData = temp;
+    console.log(responseData);
+  } catch (e) {
+    console.info(e.message);
+  }
 };
 
 getStuff();
